@@ -1,0 +1,22 @@
+{% assign c = '' | split: ',' %}
+{% for post in site.posts %}
+ {% if post.categories != null %}
+  {% for cat in post.categories %}
+   {% assign cat1 = cat | downcase %}
+   {% unless c contains cat1 %}
+     {% assign cat2 = cat1 | split: ',' %}
+     {% assign c = c | concat: cat2  %}
+   {% endunless %}
+  {% endfor %}
+ {% endif %}
+{% endfor %}
+{% assign sortedCats = c | sort %}
+
+{% if sortedCats.size > 0 %}
+<h3>categories</h3>
+<ul class="categories">
+  {% for cat in sortedCats %}
+  <li><a href="/categories/{{ cat | slugify}}.html">{{ cat }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}

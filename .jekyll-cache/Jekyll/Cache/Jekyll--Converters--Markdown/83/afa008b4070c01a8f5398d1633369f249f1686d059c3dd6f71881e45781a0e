@@ -1,0 +1,16 @@
+I"'<h1 id="projects">Projects</h1>
+<p>Listed here are the software projects I’m currently working on or plan on working on in the near future.</p>
+
+<p>Current:</p>
+
+<ul>
+  <li><a href="/projects/ball_master">Ball Master</a>, a JavaScript remake of a mobile game, using p5.js</li>
+</ul>
+
+<p>Future:</p>
+
+<ul>
+  <li>p5.tabs, a library for p5.js to easily add a tab environment to any p5.js project</li>
+  <li>Contribute to <a href="https://github.com/google/latexify_py">latexify_py</a>, a project which turns Python functions into LaTeX code</li>
+</ul>
+:ET

@@ -1,0 +1,18 @@
+---
+layout: default
+title: Logan's Blog
+---
+
+<h1>{{ page.title }}</h1>
+  {% if site.posts.size == 0 %}
+  <p> Haven't written anything yet, sorry! </p>
+  {% endif %}
+
+<ul class="posts">
+
+  {% for post in site.posts %}
+  <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+  {% endfor %}
+
+
+</ul>

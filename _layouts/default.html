@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <!-- main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+  </head>  
+  <div class="container"> 
+    <nav>
+      {% include nav_bar.html %}
+    </nav>
+    <body>
+	
+      {{ content }}
+
+    </body>
+  </div>
+  <footer>
+    {% include social.html %}
+    {% include categories.html %}
+  </footer>
+</html>
+
+  
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="homeposts">
+  {% if site.posts.size > 0 %}
+  <h2>Latest Post</h2>
+
+  {% for post in site.posts limit:1 %}
+  <p class="postlist">
+    <a href="{{ post.url }}" class="bloglink">{{ post.title }}:</a>
+    {{ post.excerpt }}
+  </p>
+  {% endfor %}
+  {% endif %}
+
+  {% if site.posts.size > 1 %}
+  <h2>Recent Posts</h2>
+
+  {% for post in site.posts offset:1 limit:2 %}
+  <p>
+    <a href="{{ post.url }}" class="bloglink">{{ post.title }}:</a>
+    {{ post.excerpt }}
+  </p>
+  {% endfor %}
+  {% endif %}
+</div>
+
+
+
+
